@@ -1,0 +1,35 @@
+-- Ejercicio N°01
+
+select * from Customers
+where Address LIKE 'Av.%'
+
+-- Ejercicio N°02
+
+select * from Customers
+where Country LIKE '%[^Brazil]%'
+
+-- Ejercicio N°03
+
+select * from Customers
+where Region LIKE '%[^NULL]%' and Fax LIKE '%[^NULL]%'
+
+SELECT * FROM Orders
+SELECT * FROM Customers
+SELECT * FROM Products
+
+-- Ejercicio N°04
+
+select count(*) from Orders
+GROUP BY ShipCountry
+
+-- Ejercicio N°05
+
+select count(*) from Orders
+GROUP BY ShipCity
+
+-- Ejercicio N°06
+
+select CategoryID, sum(UnitPrice) 'Cantidad' from Products
+group by CategoryID
+
+
